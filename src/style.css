@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: logoFont;
+  src: url(assets/fonts/Neuropol.otf);
+}
+
+:root {
+  --primary-color: rgb(24, 24, 24);
+  --secondary-color: rgb(235, 235, 240);
+  --secondary-darker: rgb(212, 212, 212);
+  --placeholder-color: rgb(119, 119, 121);
+  --icon-color: brightness(0) saturate(100%) invert(97%) sepia(5%)
+    saturate(407%) hue-rotate(195deg) brightness(93%) contrast(97%);
+  --social-icons: brightness(0) saturate(100%) invert(34%) sepia(90%)
+    saturate(3399%) hue-rotate(179deg) brightness(92%) contrast(97%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--secondary-color);
+  background-image: url(./assets/images/weatherbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em  2em;
+}
+
+#logo{
+    font-family: logoFont;
+    font-weight: 400;
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+}
+
+#search-info-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#search-info-container i{
+    font-size: 1.5rem;
+}
