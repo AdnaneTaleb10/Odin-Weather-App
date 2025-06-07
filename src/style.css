@@ -32,31 +32,109 @@ body {
   background-image: url(./assets/images/weatherbg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   min-height: 100vh;
   width: 100vw;
+  font-family: "Inter", serif;
 }
 
-header{
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2rem;
+}
+
+#logo {
+  font-family: logoFont;
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  cursor: text;
+}
+
+#search-info-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#search-info-container i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1em 5em;
+}
+
+
+#current-weather {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+
+#weather-stats{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5em  2em;
+    flex-direction: column;
+    row-gap: 1em;
 }
 
-#logo{
-    font-family: logoFont;
-    font-weight: 400;
-    font-size: 1.75rem;
+#weather-stats > div{
+    display: flex;
+    column-gap: 1em;
+}
+
+#weather-stats img{
+    width: 2.5em;
+    filter: var(--icon-color);
+}
+
+#weather-metric > h3{
     color: var(--secondary-color);
+    font-weight: 400;
 }
 
-#search-info-container{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+#weather-metric > p{
+    color: var(--secondary-color);
+    font-size: 1.7rem;
+    font-weight: 300;
+
 }
 
-#search-info-container i{
-    font-size: 1.5rem;
+#reagion {
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+#weather-description {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+#temperature {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#datetime {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+#weather-icon {
+  width: 10rem;
+}
+
+#weather-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+#weather-stats img {
+  width: 2.5em;
 }
