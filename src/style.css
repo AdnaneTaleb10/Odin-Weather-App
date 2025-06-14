@@ -33,8 +33,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  min-height: 100vh;
-  width: 100vw;
   font-family: "Inter", serif;
 }
 
@@ -69,8 +67,9 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   padding: 1em 5em;
+  padding-bottom: 3em;
+  row-gap: 16em;
 }
-
 
 #current-weather {
   display: flex;
@@ -78,32 +77,31 @@ main {
   row-gap: 10px;
 }
 
-#weather-stats{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
+#weather-stats {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
 }
 
-#weather-stats > div{
-    display: flex;
-    column-gap: 1em;
+#weather-stats > div {
+  display: flex;
+  column-gap: 1em;
 }
 
-#weather-stats img{
-    width: 2.5em;
-    filter: var(--icon-color);
+#weather-stats img {
+  width: 2.5em;
+  filter: var(--icon-color);
 }
 
-#weather-metric > h3{
-    color: var(--secondary-color);
-    font-weight: 400;
+#weather-metric > h3 {
+  color: var(--secondary-color);
+  font-weight: 400;
 }
 
-#weather-metric > p{
-    color: var(--secondary-color);
-    font-size: 1.7rem;
-    font-weight: 300;
-
+#weather-metric > p {
+  color: var(--secondary-color);
+  font-size: 1.7rem;
+  font-weight: 300;
 }
 
 #reagion {
@@ -137,4 +135,74 @@ main {
 
 #weather-stats img {
   width: 2.5em;
+}
+
+#weakly-hourly-weather {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+#switch-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  border-radius: 2em;
+  width: fit-content;
+  cursor: pointer;
+}
+
+#switch-button > div {
+  padding: 0.5em 1em;
+}
+
+.toggle-div {
+  background-color: var(--secondary-color);
+  color: #0970bb;
+  border-radius: 2em;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.week-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondary-color);
+  gap: 0.7em;
+}
+
+.day-name {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.weather-icon-card {
+  width: 5rem;
+}
+
+.temp-min-max {
+  display: flex;
+  flex-direction: column;
+}
+
+.max-temp {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.min-temp {
+  font-size: 1.2em;
+  font-weight: 400;
 }

@@ -25,3 +25,7 @@ visibilityIcon.src = visibility;
 const thermometerIcon = document.querySelector("#thermometer-icon");
 thermometerIcon.src = thermometer;
 
+const weatherIconCards = document.querySelectorAll(".weather-icon-card");
+weatherIconCards.forEach((icon) => {
+    icon.src = cloudSun
+})
