@@ -41,6 +41,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 2rem;
+  position: relative;
 }
 
 #logo {
@@ -69,7 +70,7 @@ header {
   padding-right: 0.5em;
 }
 
-.search-open{
+.search-open {
   border-bottom: 1px solid var(--secondary-color);
 }
 
@@ -234,4 +235,64 @@ main {
 .min-temp {
   font-size: 1.2em;
   font-weight: 400;
+}
+
+#profile-popup{
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  padding: 1.2em;
+  border-radius: 15px;
+  top: 3.7em;
+  right: 1.6em;
+  z-index: 2;
+}
+
+#photo-name{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--secondary-darker);
+}
+
+#profile-picture{
+  width: 4em;
+  border-radius: 20em;
+  border: 3px solid rgb(4, 129, 187);
+}
+
+#name-role{
+  padding-right: 3em;
+  cursor: text;
+}
+
+#name-role h3{
+  color: rgb(4, 129, 187);
+}
+
+#name-role p{
+  color: var(--placeholder-color);
+}
+
+#popup-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  margin-top: 15px;
+}
+
+#popup-links i{
+  color: rgb(4, 129, 187);
+  font-size: 1.7em;
+  cursor: pointer;
+}
+
+#link-copied{
+  margin-top: 10px;
+  color: rgb(4, 129, 187);
+  font-weight: 700;
+  text-align: center;
+  display: none;
 }

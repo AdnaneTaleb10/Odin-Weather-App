@@ -1,6 +1,7 @@
 import "./style.css";
 import setFavicon from "./modules/logo";
 import toggleSearchBar from "./modules/search";
+import showInfo from "./modules/InfoPopup";
 import cloudSun from "./assets/icons/weather-icons/cloud-sun.svg";
 import windSoak from "./assets/icons/highlight-icons/windsock.svg";
 import uv from "./assets/icons/highlight-icons/white-balance-sunny.svg";
@@ -32,3 +33,4 @@ weatherIconCards.forEach((icon) => {
 })
 
 toggleSearchBar();
+showInfo();
