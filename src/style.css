@@ -134,7 +134,7 @@ main {
   font-weight: 300;
 }
 
-#reagion {
+#region {
   font-size: 4rem;
   font-weight: 200;
 }
@@ -190,13 +190,15 @@ main {
   padding: 0.5em 1em;
 }
 
-.toggle-div {
+div[data-selected="true"] {
   background-color: var(--secondary-color);
   color: #0970bb;
   border-radius: 2em;
   font-weight: 500;
   transition: background-color 0.3s ease-in-out;
 }
+
+
 
 #cards-container {
   display: flex;
