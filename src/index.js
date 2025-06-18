@@ -13,7 +13,7 @@ import uv from "./assets/icons/highlight-icons/white-balance-sunny.svg";
 import humidity from "./assets/icons/highlight-icons/water-outline.svg";
 import visibility from "./assets/icons/highlight-icons/eye-outline.svg";
 import thermometer from "./assets/icons/highlight-icons/thermometer.svg";
-import { displayWeekWeatherCards } from "./modules/renderCards";
+import { displayWeatherCards } from "./modules/renderCards";
 
 const displayModeButton = document.querySelector("#switch-button");
 const weaklyButton = document.querySelector("#weeks-mode");
@@ -42,7 +42,7 @@ weatherIconCards.forEach((icon) => {
   icon.src = cloudSun;
 });
 
-let displayMode = false;
+let isWeekCardsDisplayed = true;
 
 toggleSearchBar();
 showInfo();
@@ -69,7 +69,21 @@ fetchWeatherData("Paris")
       feelsLikeValue: data.currentConditions.temp + "°C",
     });
 
-    displayWeekWeatherCards(data  , displayMode);
+    displayWeatherCards(data , isWeekCardsDisplayed)
+
+    displayModeButton.addEventListener("click", () => {
+      if (isWeekCardsDisplayed) {
+        weaklyButton.classList.remove("selected");
+        hourButton.classList.add("selected");
+        isWeekCardsDisplayed = false;
+        displayWeatherCards(data, isWeekCardsDisplayed);
+      } else {
+        hourButton.classList.remove("selected");
+        weaklyButton.classList.add("selected");
+        isWeekCardsDisplayed = true;
+        displayWeatherCards(data, isWeekCardsDisplayed);
+      }
+    });
   })
   .catch((err) => {
     console.error("❌ Error fetching weather:", err);

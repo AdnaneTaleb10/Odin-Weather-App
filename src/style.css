@@ -97,7 +97,6 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   padding: 1em 5em;
-  padding-bottom: 3em;
   row-gap: 16em;
 }
 
@@ -190,7 +189,7 @@ main {
   padding: 0.5em 1em;
 }
 
-div[data-selected="true"] {
+.selected {
   background-color: var(--secondary-color);
   color: #0970bb;
   border-radius: 2em;
@@ -203,9 +202,11 @@ div[data-selected="true"] {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 1.5em;
 }
 
-.week-card {
+.week-card,
+.hourly-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,7 +215,7 @@ div[data-selected="true"] {
 }
 
 .day-name,
-.time {
+.hour-name {
   font-size: 1.7rem;
   font-weight: 300;
 }
@@ -233,7 +234,8 @@ div[data-selected="true"] {
   font-weight: 700;
 }
 
-.min-temp {
+.min-temp ,
+.wind-speed{
   font-size: 1.2em;
   font-weight: 400;
 }
