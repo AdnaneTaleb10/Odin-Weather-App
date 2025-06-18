@@ -13,7 +13,7 @@ import uv from "./assets/icons/highlight-icons/white-balance-sunny.svg";
 import humidity from "./assets/icons/highlight-icons/water-outline.svg";
 import visibility from "./assets/icons/highlight-icons/eye-outline.svg";
 import thermometer from "./assets/icons/highlight-icons/thermometer.svg";
-import displayWeekCards from "./modules/renderCards";
+import { displayWeekWeatherCards } from "./modules/renderCards";
 
 const displayModeButton = document.querySelector("#switch-button");
 const weaklyButton = document.querySelector("#weeks-mode");
@@ -42,12 +42,13 @@ weatherIconCards.forEach((icon) => {
   icon.src = cloudSun;
 });
 
+let displayMode = false;
+
 toggleSearchBar();
 showInfo();
 
 fetchWeatherData("Paris")
   .then((data) => {
-    console.log("Weather Data:", data);
     displayWeather({
       location: data.resolvedAddress,
       weatherDesc: data.currentConditions.conditions,
@@ -68,7 +69,7 @@ fetchWeatherData("Paris")
       feelsLikeValue: data.currentConditions.temp + "°C",
     });
 
-    //displayWeekCards(data);
+    displayWeekWeatherCards(data  , displayMode);
   })
   .catch((err) => {
     console.error("❌ Error fetching weather:", err);

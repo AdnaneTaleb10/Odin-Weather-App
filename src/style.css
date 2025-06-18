@@ -198,8 +198,6 @@ div[data-selected="true"] {
   transition: background-color 0.3s ease-in-out;
 }
 
-
-
 #cards-container {
   display: flex;
   justify-content: space-between;
@@ -215,7 +213,8 @@ div[data-selected="true"] {
   gap: 0.7em;
 }
 
-.day-name {
+.day-name,
+.time {
   font-size: 1.7rem;
   font-weight: 300;
 }
@@ -239,7 +238,7 @@ div[data-selected="true"] {
   font-weight: 400;
 }
 
-#profile-popup{
+#profile-popup {
   display: none;
   position: absolute;
   background-color: var(--secondary-color);
@@ -250,7 +249,7 @@ div[data-selected="true"] {
   z-index: 2;
 }
 
-#photo-name{
+#photo-name {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -258,26 +257,26 @@ div[data-selected="true"] {
   border-bottom: 2px solid var(--secondary-darker);
 }
 
-#profile-picture{
+#profile-picture {
   width: 4em;
   border-radius: 20em;
   border: 3px solid rgb(4, 129, 187);
 }
 
-#name-role{
+#name-role {
   padding-right: 3em;
   cursor: text;
 }
 
-#name-role h3{
+#name-role h3 {
   color: rgb(4, 129, 187);
 }
 
-#name-role p{
+#name-role p {
   color: var(--placeholder-color);
 }
 
-#popup-links{
+#popup-links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,13 +284,13 @@ div[data-selected="true"] {
   margin-top: 15px;
 }
 
-#popup-links i{
+#popup-links i {
   color: rgb(4, 129, 187);
   font-size: 1.7em;
   cursor: pointer;
 }
 
-#link-copied{
+#link-copied {
   margin-top: 10px;
   color: rgb(4, 129, 187);
   font-weight: 700;
